@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title Festive wishes
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  body
+    .container-fluid
+      = yield
+    .width100pc
+      .footer.navbar-fixed-bottom.right
+        span.bottom-gap-10.white-text = "Website developed by SriramK89"

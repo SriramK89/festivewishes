@@ -1,0 +1,15 @@
+= render "choose_festive", festive: festive, name: name
+- name = name.nil? ? 'Good heart' : name
+.center
+  br
+  - if validity
+    .span5
+      = image_tag "#{festive}.jpg"
+    .span5
+      = render "home/wishes/#{festive}_wishes", name: name
+      br
+      br
+      .right
+        = "- Hearty wishes from #{name}"
+  - else
+    = render 'home/wishes/no_wishes'

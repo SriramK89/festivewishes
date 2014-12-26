@@ -47,3 +47,11 @@
 .white-text {
   color: white;
 }
+
+.label-choose-festive {
+  padding-top: 4px;
+}
+
+.choose-festive {
+  background-color: #eee;
+}

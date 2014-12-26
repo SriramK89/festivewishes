@@ -10,7 +10,8 @@ window.Custom = do ->
       name = $('#wisher_name').val()
       if name.length > 0
         name = name.split(' ').join('_')
-        window.location.href = "?name=#{name}"
+        festive = $('#festive').val()
+        window.location.href = "?name=#{name}&festive=#{festive}"
       else
         alert "Please provide a name"
     )

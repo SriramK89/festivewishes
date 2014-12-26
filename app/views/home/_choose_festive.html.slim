@@ -1,9 +1,12 @@
-= form_tag(:root, method: 'get', class: "width100pc hide bottom-gap-10 top-gap-10", id: 'customize_form') do
-  .span7
-    = label_tag('', "Name:", class: 'right-gap-5 float-left')
+= form_tag(:root, method: 'get', class: "hide bottom-gap-10 top-gap-10", id: 'customize_form') do
+  .span4
+    = label_tag('', "Name:", class: 'right-gap-5 float-left label-choose-festive')
     = text_field_tag(:name, name, class: 'right-gap-5', id: "wisher_name")
-    / = select_tag(:festive, options_for_select(generate_options, festive))
-  .span3
+  .span4
+    = label_tag('', "Festive:", class: 'right-gap-5 float-left label-choose-festive')
+    = select_tag(:festive, options_for_select(generate_options, festive))
+  div
     = link_to("Done!", "#", class: "btn btn-primary", id: "submit_customize")
+  hr
 .bottom-gap-10.top-gap-10.right
   = link_to("Customize", "#", class: "btn btn-info", id: "customize")

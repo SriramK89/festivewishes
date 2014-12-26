@@ -3,10 +3,9 @@ class HomeController < ApplicationController
   layout 'application'
 
   def index
-    validity = true # check_festive_validity
-    festive = "christmas"
+    validity = check_festive_validity
     params[:name] && (params[:name] = params[:name].split("_").join(' '))
-    render locals: { validity: validity, festive: festive,
+    render locals: { validity: validity, festive: params[:festive],
       name: params[:name] }
   end
 

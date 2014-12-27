@@ -1,7 +1,8 @@
 doctype html
 html
   head
-    title Festive wishes
+    - title_festive = validity ? festive.split('_').map(&:capitalize).join(' ') : 'Festive'
+    title = "#{title_festive} wishes"
     = stylesheet_link_tag    "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags

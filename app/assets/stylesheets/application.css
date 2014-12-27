@@ -44,6 +44,11 @@
   clear: none;
 }
 
+.float-right {
+  float: right;
+  clear: none;
+}
+
 .white-text {
   color: white;
 }

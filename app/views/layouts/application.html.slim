@@ -9,5 +9,8 @@ html
     .container-fluid
       = yield
     .width100pc
-      .footer.navbar-fixed-bottom.right
-        span.bottom-gap-10.white-text = "Website developed by SriramK89"
+      .footer.navbar-fixed-bottom
+        .span5
+          = "Want to give feedback? Drop an email to "
+          = mail_to "sriramhearing@gmail.com"
+        span.float-right.bottom-gap-10.white-text = "Website developed by SriramK89"
